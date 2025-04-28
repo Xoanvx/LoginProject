@@ -19,6 +19,85 @@ body {
     position: relative;
 }
 
+/* Estilo para el contenedor principal del header */
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #d9d9d9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+/* Estilo para el contenedor del logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo-container img {
+    height: 60px; /* Ajusta según necesites */
+    width: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-family: 'Arial', sans-serif; /* Cambia según la tipografía que uses */
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: #000000;
+}
+
+/* Estilo para el menú */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos al final */
+    flex-grow: 1; /* Hace que ocupe el espacio restante */
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.menu li:hover {
+    background: #c7a17a;
+}
+
+.menu li:hover a {
+    color: #fff;
+}
+
+/* Estilo para el botón LOGIN */
+.login-button a {
+    border: 1px solid #c7a17a;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.login-button:hover a {
+    background: #c7a17a;
+    color: #fff;
+}
+
 .login-container {
     width: 90%;
     max-width: 400px;
