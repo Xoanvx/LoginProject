@@ -14,9 +14,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     color: #fff;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 /* Estilo para el contenedor principal del header */
@@ -30,7 +32,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 0 20px;
+    padding: 0 20px;         
 }
 
 /* Estilo para el contenedor del logo */
@@ -99,23 +101,51 @@ body {
 }
 
 .login-container {
+    background-color: #1a1a1a;
     width: 90%;
-    max-width: 400px;
-    background-color: #222222; /* Fondo gris oscuro para el panel principal */
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    padding: 30px 20px;
+    max-width: 350px;
     text-align: center;
-    position: relative;
+    padding: 25px 15px;
+    margin-top: 80px; /* Espacio para el header */
 }
 
-h2 {
+/* Nuevos estilos para el título y subtítulo */
+.login-container h1 {
     font-family: 'Playfair Display', serif;
-    color: #c7a17a; /* Color dorado/bronce similar al de la imagen */
-    font-size: 28px;
-    margin-bottom: 20px;
+    color: #c7a17a; /* Color dorado/bronce */
+    font-size: 36px;
+    margin-bottom: 0;
     font-weight: 700;
+}
+
+.login-container .subtitle {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Mensaje de bienvenida */
+.welcome-message {
+    margin-bottom: 30px;
+}
+
+.welcome-message p {
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+/* Formulario de login */
+form#loginForm {
+    background-color: #d9d9d9;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #c7a17a; /* Añadir borde dorado/bronce */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Opcional: añadir sombra para destacar */
 }
 
 /* Estilizado para los grupos de input */
@@ -128,33 +158,33 @@ h2 {
     display: block;
     font-size: 14px;
     margin-bottom: 8px;
-    color: #f2f2f2;
+    color: #666;
+    font-weight: 500;
 }
 
 .input-group input {
     width: 100%;
-    padding: 15px 45px 15px 15px; /* Espacio para el icono a la derecha */
+    padding: 10px 15px;
     border: none;
     border-radius: 30px; /* Inputs redondeados como en la imagen */
     background-color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
 }
 
 /* Estilizado para el botón de login */
 .login-btn {
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 30px;
     background-color: #c7a17a; /* Color dorado/bronce para el botón */
     color: white;
-    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     margin-top: 10px;
-    margin-bottom: 15px;
     transition: background-color 0.3s;
+    width: auto;
 }
 
 .login-btn:hover {
@@ -165,7 +195,7 @@ h2 {
 .register-link {
     margin-top: 15px;
     font-size: 14px;
-    color: #e0e0e0;
+    color: #000000;
 }
 
 .register-link a {
@@ -178,6 +208,16 @@ h2 {
     text-decoration: underline;
 }
 
+/* Logo en la parte inferior */
+.bottom-logo {
+    margin-top: 40px;
+}
+
+.bottom-logo img {
+    width: 60px;
+    height: auto;
+}
+
 /* Estilos responsivos */
 @media (max-width: 480px) {
     .login-container {
@@ -185,7 +225,15 @@ h2 {
         padding: 20px 15px;
     }
     
-    h2 {
-        font-size: 24px;
+    .login-container h1 {
+        font-size: 32px;
+    }
+    
+    .login-container .subtitle {
+        font-size: 18px;
+    }
+    
+    form#loginForm {
+        padding: 20px;
     }
 }
